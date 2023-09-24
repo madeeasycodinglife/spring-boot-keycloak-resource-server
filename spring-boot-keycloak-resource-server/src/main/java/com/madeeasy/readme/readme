@@ -34,7 +34,16 @@ ________________________________________________________________________________
 #2) Authorization > Bearer Token > Token : <access-token>
 #3) Send
 
-
-
-
+//------------------------------------- To get access token + refresh token [grant_type = client_credentials] ---------------------------------------
+--------------------------------------------------------------
+Notes : in keycloak you should remember the following things 
+1) client authentication [on]
+2) srevice accounts role [checked]
+--------------------------------------------------------------
+#1) POST http://localhost:8080/realms/{realm-name}/protocol/openid-connect/token
+#2) body > x-www-form-urlencoded
+#3) grant_type : client_credentials
+#4) client_id : <generated>
+#5) client_secret : <generated>
+#8) send
 
